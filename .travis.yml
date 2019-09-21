@@ -5,3 +5,13 @@ services:
 script:
   - docker build -t mannydesigns/node .
   - docker images mannydesigns/node
+
+
+before_deploy:
+  - docker login -u superironpanda -p 7xLXzqh8nVVprsW
+
+deploy:
+  provider: script
+  script: docker push mannydesigns/node
+  on:
+    branch: master
