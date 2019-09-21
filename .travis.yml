@@ -3,8 +3,8 @@ services:
   - docker
 
 script:
-  - docker build -t mannydesigns/node .
-  - docker images mannydesigns/node
+  - docker build -t superironpanda/node .
+  - docker images superironpanda/node
 
 
 before_deploy:
@@ -12,6 +12,6 @@ before_deploy:
 
 deploy:
   provider: script
-  script: docker push mannydesigns/node
+  script: docker push superironpanda/node
   on:
     branch: master
